@@ -1,0 +1,16 @@
+---
+- name: Print inclusion type
+  hosts: production
+  vars_files:
+    - test.yaml
+  
+  vars:
+    var1: hhhhhhhh
+    var2: hhhhhoooooo
+    my_var: nice
+  tasks:
+    - name: Print all variables in production
+      debug:
+        msg: "Print all variables: {{ var1 }}, {{ my_var }}, {{ var2 }}"
+...
+

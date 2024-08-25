@@ -1,0 +1,10 @@
+---
+- name: Print inclusion type
+  hosts: node1
+  tasks:
+    - name: Print all variables in production
+      debug:
+        msg: "Print all variables: {{ ansible_default_ipv4.address }}, {{ ansible_devices['nvme0n1'].partitions['nvme0n1p1'].links.ids }}"
+
+...
+

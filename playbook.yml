@@ -1,0 +1,27 @@
+---
+- name: My FIrst PlayBook
+  hosts: production
+  tasks:
+    
+    - name: create DevOps group
+      ansible.builtin.group:
+        name: DevOps
+        state: present
+        gid: 1500
+   
+    - name: create directory
+      ansible.builtin.file:
+        path: /etc/some_directory
+        state: directory
+        mode: '0755'
+        owner: anible
+        group: DevOps
+
+
+
+
+
+...
+
+
+

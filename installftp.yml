@@ -1,0 +1,21 @@
+---
+- name: Deployment the vsftpd
+  hosts: production
+  tasks:
+
+    - name: Install vsftpd
+      ansible.builtin.package:
+        name: vsftpd
+        state: present
+
+    - name: Start service vsftpd
+      ansible.builtin.service:
+        name: vsftpd
+        state: started
+        enabled: yes
+
+
+
+
+...
+

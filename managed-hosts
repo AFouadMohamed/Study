@@ -1,0 +1,23 @@
+[production]
+
+node1 var1=123 var2=456
+node2 var1=789 var2=10111
+
+
+[production:vars]
+my_var=ahmed
+
+
+
+
+
+[dev]
+
+server1
+server2
+server[3:5]
+
+[test]
+
+10.0.0[1:5]
+

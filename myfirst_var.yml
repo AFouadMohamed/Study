@@ -1,0 +1,12 @@
+---
+- name: print my first variable project
+  hosts: production
+  tasks:
+    - name: print all variable in production
+      debug:
+        msg:  print all variable,,,  {{var1}} , {{my_var}} , {{var2}}
+
+
+
+
+...

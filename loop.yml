@@ -1,0 +1,18 @@
+---
+- name: cretae loop exampe
+  hosts: production
+  tasks:
+    - name: create group
+      group:
+        name: "{{item.name}}"
+        state: present
+        gid: "{{item.id}}"
+      loop:
+        - name: hr
+          id : 1500
+        - name: account
+          id: 1600
+
+
+
+...

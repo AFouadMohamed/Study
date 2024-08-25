@@ -1,0 +1,14 @@
+---
+- name: install web services
+  hosts: production
+  tasks:
+    - name: install web-servies
+      package:
+        name: apache2
+        state: present
+      when: ansible_os_family == "Debian" and ansible_distribution_major_version == 24
+
+
+
+
+...
